@@ -16,6 +16,7 @@
 </div>
 
 
+
 **Get the API Key:**
 
 - Open a web browser and navigate to TMDB (The Movie Database) website.
