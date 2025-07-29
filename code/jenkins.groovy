@@ -13,7 +13,7 @@ pipeline {
     stages{
         stage('code-checkout'){
             steps{
-               git branch: 'main', changelog: false, poll: false, url: 'https://github.com/abhipraydhoble/netflix.git' 
+               git branch: 'main', changelog: false, poll: false, url: 'https://github.com/SurajRaut9130/netflix_project' 
             }
         }
         stage('sonar-analysis'){
