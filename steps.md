@@ -258,7 +258,7 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git branch: 'main', url: 'https://github.com/abhipraydhoble/netflix.git'
+                git branch: 'main', url: 'https://github.com/SurajRaut9130/netflix_project'
             }
         }
         stage("Sonarqube Analysis "){
