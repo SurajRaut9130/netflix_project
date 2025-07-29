@@ -47,7 +47,7 @@ pipeline {
 
         stage('Code-Pull') {
             steps {
-                git branch: 'main', url: 'https://github.com/abhipraydhoble/netflix.git'
+                git branch: 'main', url: 'https://github.com/SurajRaut9130/netflix_project'
             }
         }
         stage("Sonarqube Analysis") {
@@ -96,7 +96,7 @@ pipeline {
 
         stage('Code-Pull') {
             steps {
-                git branch: 'main', url: 'https://github.com/abhipraydhoble/netflix.git'
+                git branch: 'main', url: 'https://github.com/SurajRaut9130/netflix_project'
             }
         }
         stage("Sonarqube Analysis") {
@@ -141,7 +141,7 @@ pipeline {
         }
         stage('Deploy to container'){
             steps{
-                sh 'docker run -d --name netflix -p 8081:80 abhipraydh96/moviesite'
+                sh 'docker run -d --name netflix -p 8081:80 SurajRaut9130/moviesite'
             }
         }
         
