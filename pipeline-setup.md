@@ -116,7 +116,7 @@ pipeline {
 
         stage('Code-Pull') {
             steps {
-                git branch: 'main', url: 'https://github.com/abhipraydhoble/netflix.git'
+                git branch: 'main', url: 'https://github.com/SurajRaut9130/netflix_project'
             }
         }
         stage("Sonarqube Analysis") {
@@ -148,20 +148,20 @@ pipeline {
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker'){   
-                       sh "docker build --build-arg TMDB_V3_API_KEY=020581a34f3ab93b1360a55bea864bd9 -t abhipraydh96/moviesite ."
-                       sh "docker push abhipraydh96/moviesite "
+                       sh "docker build --build-arg TMDB_V3_API_KEY=020581a34f3ab93b1360a55bea864bd9 -t SurajRaut9130/moviesite ."
+                       sh "docker push Surajraut9130/moviesite "
                     }
                 }
             }
         }
         stage("TRIVY"){
             steps{
-                sh "trivy image abhipraydh96/moviesite > trivyimage.txt" 
+                sh "trivy image Surajraut9130/moviesite > trivyimage.txt" 
             }
         }
         stage('Deploy to container'){
             steps{
-                sh 'docker run -d --name netflix -p 8081:80 abhipraydh96/moviesite'
+                sh 'docker run -d --name netflix -p 8081:80 SurajRaut9130/moviesite'
             }
         }
         
